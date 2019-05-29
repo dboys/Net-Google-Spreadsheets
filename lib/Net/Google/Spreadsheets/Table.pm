@@ -1,6 +1,6 @@
 package Net::Google::Spreadsheets::Table;
-use Any::Moose;
-use Any::Moose '::Util::TypeConstraints';
+use Moose;
+use Moose::Util::TypeConstraints;
 use Net::Google::DataAPI;
 use XML::Atom::Util qw(nodelist first create_element);
 use Net::Google::Spreadsheets::Worksheet;
@@ -110,20 +110,20 @@ around to_atom => sub {
 
 __PACKAGE__->meta->make_immutable;
 
-no Any::Moose;
-no Any::Moose '::Util::TypeConstraints';
+no Moose;
+no Moose::Util::TypeConstraints;
 no Net::Google::DataAPI;
 
 package # hide from PAUSE
     Net::Google::Spreadsheets::Table::Column;
-use Any::Moose;
+use Moose;
 
 has 'index' => ( is => 'ro', isa => 'Str' );
 has 'name' => ( is => 'ro', isa => 'Str' );
 
 __PACKAGE__->meta->make_immutable;
 
-no Any::Moose;
+no Moose;
 
 1;
 __END__

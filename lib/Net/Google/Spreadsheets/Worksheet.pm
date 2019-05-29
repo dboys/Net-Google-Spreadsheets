@@ -1,5 +1,5 @@
 package Net::Google::Spreadsheets::Worksheet;
-use Any::Moose;
+use Moose;
 use Net::Google::DataAPI;
 
 with 'Net::Google::DataAPI::Role::Entry';
@@ -87,7 +87,7 @@ sub batchupdate_cell {
     } $res_feed->entries;
 }
 
-no Any::Moose;
+no Moose;
 no Net::Google::DataAPI;
 
 1;

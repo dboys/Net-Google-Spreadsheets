@@ -1,6 +1,6 @@
 package Net::Google::Spreadsheets;
 use 5.008001;
-use Any::Moose;
+use Moose;
 use Net::Google::DataAPI;
 use Net::Google::AuthSub;
 use Net::Google::DataAPI::Auth::AuthSub;
@@ -67,7 +67,7 @@ sub BUILD {
 
 __PACKAGE__->meta->make_immutable;
 
-no Any::Moose;
+no Moose;
 no Net::Google::DataAPI;
 
 1;

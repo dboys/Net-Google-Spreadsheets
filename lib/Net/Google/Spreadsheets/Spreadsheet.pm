@@ -1,5 +1,5 @@
 package Net::Google::Spreadsheets::Spreadsheet;
-use Any::Moose;
+use Moose;
 use Net::Google::DataAPI;
 
 with 'Net::Google::DataAPI::Role::Entry';
@@ -50,7 +50,7 @@ feedurl table => (
 
 __PACKAGE__->meta->make_immutable;
 
-no Any::Moose;
+no Moose;
 no Net::Google::DataAPI;
 
 1;
